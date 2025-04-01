@@ -29,14 +29,56 @@
 
             Nested for loop
         */
-       for(var i = 1 ; i<=5 ; i++)
-       {
-            for(var j = 1 ; j<=i ; j++)
-            {
-                document.write(j)
+        //    for(var i = 1 ; i<=5 ; i++)
+        //    {
+        //         for(var j = 1 ; j<=i ; j++)
+        //         {
+        //             document.write(j)
+        //         }
+        //         document.write("<br>")
+        //    }
+
+        /*
+            function
+            1. library function
+            2. User Define function       
+            *-> syntax
+                function name()
+                {
+                    // statement
+                }
+
+                1. no parameter, no return
+                2. with parameter, no return
+                3. no parameter, with return
+                4. with parameter, with return
+            */
+
+        // function define
+        function test() {
+            var a = parseInt(prompt("Enter value")), b = parseInt(prompt("Enter value"))
+            if (a < b) {
+                document.write(a, " is min<br>")
             }
-            document.write("<br>")
-       }
+            else {
+                document.write(b, " is min<br>")
+            }
+        }
+        function abc(t,y) {
+            if (t<y) {
+                document.write(t," is min")
+            }
+            else{
+                document.write(y, " is min")
+            }
+        }
+        abc(10, 70)
+        // test()
+        // test()
+        // document.write("hello<br>")
+        // test()
+        // document.write("hello<br>")
+
     </script>
 </body>
 
