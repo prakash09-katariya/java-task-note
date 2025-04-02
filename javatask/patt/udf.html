@@ -1,0 +1,66 @@
+<h1> UDF - user define function</h1>
+<h2>no argu, no return</h2>
+<script>
+
+
+// no argu, no return
+
+function printMsg()
+{
+    document.write("Hello")
+}
+printMsg()
+
+</script>
+
+<h2>with argu , no return</h2>
+<script>
+//  with argu , no return
+
+function getValue(a , b)
+{
+    total = a+b
+    document.write(total)
+}
+getValue(12,45)
+</script>
+
+
+<h2>no argu , with return</h2>
+<script>
+    // no argu , with return
+
+function getSqr()
+{
+    return 5*5
+}
+   document.write(getSqr())
+   document.write("&nbsp;&nbsp;")
+   const s = getSqr() * 10
+   document.write(s)
+
+// const store = getSqr()
+// const multi = store * 10
+// document.write(multi)
+
+</script>
+
+
+<h2>with argu , with return</h2>
+<script>
+
+    // with argu , with return
+
+
+function getReturn(a,b)
+{
+return a*b
+}
+const a = parseInt(prompt("Enter A = "))
+const b = parseInt(prompt("Enter B = "))
+const st = getReturn(a , b)
+document.write(st)
+
+</script>
+
+
