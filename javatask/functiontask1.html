@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function value(a,b,c,d,e){
-            if(a<b && a<c && a<d && a<e){
-                document.write(a,"is min")
+        function value(a, b, c, d, e) {
+            if (a < b && a < c && a < d && a < e) {
+                document.write(a, "is min")
             }
-            else if(b<c && b<d && b<e){
-                document.write(b,"is min")
+            else if (b < c && b < d && b < e) {
+                document.write(b, "is min")
             }
-  
-        else{
-            if(c<d && c<e){
-                document.write(c,"is min")
+            else if (c < d && c < e) {
+                document.write(c, "is min")
             }
-            else{
-                if(d<e){
-                    document.write(d,"is min")
-                }
-                else{
-                    document.write(e,"is min")
-                }
+            else if (d < e) {
+                document.write(d, "is min")
+            }
+            else {
+                document.write(e, "is min")
             }
         }
-    }
 
-        value(100,50,40,30,20)
-        
+        value(100, 50, 40, 30, 20)
+
     </script>
 </body>
+
 </html>

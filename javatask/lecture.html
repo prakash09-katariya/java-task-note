@@ -55,29 +55,54 @@
             */
 
         // function define
-        function test() {
-            var a = parseInt(prompt("Enter value")), b = parseInt(prompt("Enter value"))
-            if (a < b) {
-                document.write(a, " is min<br>")
+        // function test() {
+        //     var a = parseInt(prompt("Enter value")), b = parseInt(prompt("Enter value"))
+        //     if (a < b) {
+        //         document.write(a, " is min<br>")
+        //     }
+        //     else {
+        //         document.write(b, " is min<br>")
+        //     }
+        // }
+        // function abc(t,y) {
+        //     if (t<y) {
+        //         document.write(t," is min")
+        //     }
+        //     else{
+        //         document.write(y, " is min")
+        //     }
+        // }
+        // abc(10, 70)
+        // test()
+        // test()
+        // document.write("hello<br>")
+        // test()
+        // document.write("hello<br>")
+
+        // no arg, with return
+        // function hello()
+        // {
+        //     var a = 10, b = 25
+        //     var total = a + b
+        //     return total
+        // }
+        // var t = hello()
+        // document.write(t)
+
+        // with arg, with return
+        function min(a, b, c) {
+            if (a < b && a < c) {
+                return a
+            }
+            else if (b < c) {
+                return b
             }
             else {
-                document.write(b, " is min<br>")
+                return c
             }
         }
-        function abc(t,y) {
-            if (t<y) {
-                document.write(t," is min")
-            }
-            else{
-                document.write(y, " is min")
-            }
-        }
-        abc(10, 70)
-        // test()
-        // test()
-        // document.write("hello<br>")
-        // test()
-        // document.write("hello<br>")
+        var m = min(10,20,4)
+        document.write(m)
 
     </script>
 </body>
