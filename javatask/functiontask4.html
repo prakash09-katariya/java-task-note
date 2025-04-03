@@ -4,18 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
-    <script>
+    <!-- <script>
        function cal(){
        var a =parseInt(prompt("plese enter the number")),b=parseInt(prompt("plese enter the number"))
           sum = a+b
-          document.write(sum)
-          confirm (sum)
+            return sum
        }
 
        cal()
-       
+       t=sum
+       document.write(t)
+    </script> -->
+
+    <script>
+        function col(a,b,c){
+            sum=a+b+c
+            substraction= a*b*c
+            return  
+        }
+
+        col(10,20,30)
+        t=sum , z=substraction
+        document.write(z)
+        if(sum ==substraction){
+            document.write("spy-number<br>")
+        }
+        else{
+            document.write("not-spy")
+        }
+    </script>
+       <script>
+        function col(a,b,c){
+            sum=a+b+c
+            substraction= a*b*c
+            return
+
+            if(sum==substraction){
+                document.write("spy")
+            }
+            else{
+                document.write("not-spy")
+            }
+           
+        }
+
+        col(10,20,30)
+        document.write("<br>sum=",sum) 
+        document.write("<br>substraction=",substraction)
     </script>
 </body>
 </html>

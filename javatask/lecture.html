@@ -90,19 +90,32 @@
         // document.write(t)
 
         // with arg, with return
-        function min(a, b, c) {
-            if (a < b && a < c) {
-                return a
+        // function min(a, b, c) {
+        //     if (a < b && a < c) {
+        //         return a
+        //     }
+        //     else if (b < c) {
+        //         return b
+        //     }
+        //     else {
+        //         return c
+        //     }
+        // }
+        // var m = min(10,20,4)
+        // document.write(m)
+
+        for (var i = 1; i <= 5; i++) {
+            for (var k=4 ; k>=i ; k--) {
+                document.write("*")
             }
-            else if (b < c) {
-                return b
+            for (var j = 1; j <= i; j++) {
+                document.write(j)
             }
-            else {
-                return c
+            for (var j = 1; j <= i; j++) {
+                document.write(j)
             }
+            document.write("<br>")
         }
-        var m = min(10,20,4)
-        document.write(m)
 
     </script>
 </body>
