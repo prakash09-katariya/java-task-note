@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        .container{
+            width: 1140px;
+            margin: 0 auto;
+        }
+        .w-100{
+            width: 100%;
+        }
+
+        .wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .wrapper .box{
+            width: 33%;
+            background-color: aqua;
+            color: black;
+            padding: 50px;
+            background-image: url(https://i.pinimg.com/originals/71/63/4c/71634c98095a3c67686d0fc7d1467259.jpg);
+        }
+        .wrapper .box img{
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-100">
+        <div class="container">
+            <div class="wrapper">
+                <div class="box">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi deleniti molestiae necessitatibus dolor reprehenderit autem doloremque et, maxime cum excepturi aperiam ipsam praesentium ex. Incidunt, accusantium. Rem est, at, voluptates delectus ab quod accusamus quas ducimus iure ex numquam in excepturi ullam quos dolorem non architecto cum atque maxime? Et!
+                </div>
+                <div class="box ">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi deleniti molestiae necessitatibus dolor reprehenderit autem doloremque et, maxime cum excepturi aperiam ipsam praesentium ex. Incidunt, accusantium. Rem est, at, voluptates delectus ab quod accusamus quas ducimus iure ex numquam in excepturi ullam quos dolorem non architecto cum atque maxime? Et!
+                </div>
+                <div class="box">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi deleniti molestiae necessitatibus dolor reprehenderit autem doloremque et, maxime cum excepturi aperiam ipsam praesentium ex. Incidunt, accusantium. Rem est, at, voluptates delectus ab quod accusamus quas ducimus iure ex numquam in excepturi ullam quos dolorem non architecto cum atque maxime? Et!
+                </div>
+            </div>
+            <button onclick="css()">click me</button>
+        </div>
+    </div>
+    <script>
+        function css(){
+            document.getElementsByClassName('box')[0,1]
+            var bo = document.getElementsByClassName('box')[0];
+            bo.style.color='white'
+            bo.style.backgroundColor='blue'
+            bo.style.padding='50px'
+            bo.style.borderRedius='200px'
+            bo.style.margin='20px'
+            bo.style.backgroundImage='URL(https://avatars.mds.yandex.net/get-mpic/4055817/img_id8210798800633647832.jpeg/orig)';
+            bo.style.backgroundImage='cover'
+            bo.backgroundPosition ='center'
+            
+             document.getElementsByClassName('box')[1]
+             var ko= document.getElementsByClassName('box')[1]
+             ko.style.color='pink'
+             ko.style.fontSize='35                                      px'
+             ko.style.backgroundColor='grey'
+             ko.style.backgroundImage='URL(https://fsd.multiurok.ru/html/2019/01/10/s_5c37480636665/1048065_1.jpeg)'
+             ko.style.backgroundImage='cover'
+            ko.backgroundPosition ='center'
+            ko.innerText="hello-google"
+
+             document.getElementsByClassName('box')[2]
+            var go = document.getElementsByClassName('box')[2];
+            go.style.color='white'
+            go.style.backgroundColor='blue'
+            go.style.padding='50px'
+            go.style.margin='20px'
+            go.style.borderRedius='200px'
+        }
+    </script>
+</body>
+</html>
