@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>armstrong-number</h1>
+    <script>
+             // // arm-srong-number
+
+        var b =153;
+        y=b
+        sum = 0;
+
+        document.write(b)
+
+        while(b>0){
+            digit = b % 10;
+            sum = sum + digit**3;
+            b=parseInt(b/10)
+            console.log(sum)
+
+        }
+        if(y == sum){
+            document.write("<br>arm-strong<br>")
+        }
+        else{
+            document.write("<br>not-arm-strong<br>")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>spy-number</h1>
+    <script>
+        
+        // spy-number
+
+        var c= 123;
+        var sum = 0;
+        var multiplyer = 1;
+        document.write(c,"<br>")
+
+        while(c>0){
+            digit = c % 10;
+            sum = sum + digit;
+            multiplyer = multiplyer * digit;
+            c = parseInt(c/10);
+            console.log(multiplyer)
+        }
+        if(sum == multiplyer){
+            document.write("spy-number<br>")
+        }
+        else{
+            document.write("not-spy-number<br>")
+        }
+    </script>
+</body>
+</html>

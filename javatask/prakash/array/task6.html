@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>assending-number</h1>
+    <script>
+        let Array = [5, 4, 1, 2, 3];
+    
+        for (let i = 0; i < Array.length; i++) {
+            for (let j = i + 1; j < Array.length; j++) {
+                if (Array[i] > Array[j]) {
+                    let temp = Array[i];
+                    Array[i] = Array[j];
+                    Array[j] = temp;
+                }
+            }
+        }
+    
+        document.write(Array)
+    </script>
+
+        <h1>cross-sum-value</h1>
+        
+    <script>
+        // user = 3-1 => 9
+        let array = [[1, 21], [4, 5]]
+        var sum = 0
+        var sum1 = 0
+    
+        // 1   21     78
+        // 0,0  0,1   0,2
+        // 4   5    90
+        // 1,0  1,1  1,2
+        // 12    34   45
+        // 2,0   2,1  2,2
+    
+        for (var i = 0; i < array.length; i++) {
+            for (var j = 0; j < array.length; j++) {
+                if (i == j) {
+                    sum = sum + array[i][j]
+                }
+                if (i + j == 1) {
+                    sum1 = sum1 + array[i][j]
+                }
+            }
+        }
+        document.write("sum ==> ", sum)
+        document.write("<br>sum ==> ", sum1)
+    
+    
+    
+    </script>
+</body>
+</html>

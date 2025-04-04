@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- event [click , double click , mouse]  -->
+ <!-- dom => document object model -->
+
+ <!-- selector => tagname[index] [multi time use], classname[index][multi time use] , id name[one time use] -->
+
+ <!-- innerText , innerHtml [Html tag apply] -->
+
+<script>
+
+</script>
+
+
+<h1>Hello</h1>
+<h1>Hello</h1>
+<h1>Hello</h1>
+<h1>Hello</h1>
+
+<p class="change">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quisquam nihil ut doloremque, vero libero atque perspiciatis suscipit quae, similique eligendi alias eos iste deserunt rem rerum. Dicta, cum voluptatum.</p>
+
+
+<span id="cdmi">HEllo</span>
+<span id="cdmi1">HEllo</span>
+
+<br><br>
+
+
+<button onclick="document.getElementsByTagName('h1')[0,3].innerText='good morning'">good morning</button>
+
+<button onclick="document.getElementsByClassName('change').innerHTML='<b>CREATIVE</b>'">Change Paragraph</button>
+
+<button onclick="document.getElementById('cdmi').innerHTML='<i>Text Italic</i>'">Change using ID</button>
+
+<button onclick="document.getElementById('cdmi1').innerHTML='<i>Text Italic</i>'">Change using ID</button>
+</body>
+</html>
