@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one-click-cssremove</title>
+    <style>
+        .w-100{
+            width: 100%;
+        }
+        .container{
+            width: 1140px;
+            margin: 0 auto;
+        }
+
+        .wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .box{
+            background-image: url(https://avatars.mds.yandex.net/get-mpic/4055817/img_id8210798800633647832.jpeg/orig);
+            background-size: cover;
+            width: 33%;
+            height: 300px;
+         
+        }
+        p{
+            color: white;
+            padding: 50px;
+            font-size: 16px;
+        }
+        button{
+            padding: 10px;
+            box-shadow: 0 0 10px black;
+            border: 1px solid balck;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-100">
+        <div class="container">
+            <div class="wrapper">
+                <div class="box">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, suscipit?</p>
+                </div>
+                <div class="box">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, suscipit?</p>
+                </div>
+                <div class="box">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, suscipit?</p>
+                </div>
+            </div>
+
+            <button onclick="change()">click</button>
+        </div>
+    </div>
+
+    <script>
+        var j=0;
+        function change(){
+           
+
+            if(j %2 ==0){
+                document.getElementsByTagName('p')[0].style.fontSize='20px';
+                document.getElementsByClassName('box')[0].style.width='100%';
+                document.getElementsByTagName('p')[1].style.fontSize='30px';
+                document.getElementsByTagName('p')[2].style.fontSize='35px';
+                document.getElementsByTagName('p')[2].style.color='blue';
+                document.getElementsByClassName('box')[1].style.width='33%';
+                document.getElementsByClassName('box')[2].style.width='100%';
+               
+            }
+            
+            else {
+                document.getElementsByTagName('p')[0].style.fontSize='16px';
+                document.getElementsByTagName('p')[1].style.fontSize='16px';
+                document.getElementsByTagName('p')[2].style.fontSize='16px';
+                document.getElementsByTagName('p')[2].style.color='white';
+                document.getElementsByClassName('box')[0].style.width='33%';
+                document.getElementsByClassName('box')[1].style.width='100%';
+                document.getElementsByClassName('box')[2].style.width='33%';
+            }
+            j++
+
+        }
+    </script>
+</body>
+</html>

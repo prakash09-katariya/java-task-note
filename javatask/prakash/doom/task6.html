@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on-off</title>
+    <style>
+    .box{
+        background-image: url(../img/ok-off.png);
+        background-size: cover;
+        width: 50%;
+        height: 900px;
+    }
+      
+    </style>
+</head>
+<body>
+    <div class="w-100">
+        <div class="container">
+            <div class="box">
+                
+            </div>
+            <button onclick="on()">ON</button>
+            <button onclick="off()">OFF</button>
+        </div>
+    </div>
+    <script>
+        function on(){
+            document.getElementsByClassName('box')[0].style.backgroundImage='URL(../img/ok-on.png)';
+            document.getElementsByClassName('box')[0].style.backgroundSize='cover';
+            document.getElementsByClassName('box')[0].style.width='50%'
+            document.getElementsByClassName('box')[0].style.height='900px'
+            document.getElementsByClassName('box')[0].style.backgroundPosition ='center';
+        }
+        function off(){
+            document.getElementsByClassName('box')[0].style.backgroundImage = 'URL(../img/ok-off.png)';
+        }
+    </script>
+</body>
+</html>

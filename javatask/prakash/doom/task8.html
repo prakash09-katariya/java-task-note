@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick-change-image</title>
+    <style>
+        .box{
+            background-size: cover;
+            height: 300px;
+            width: 600px;
+            background-size: 100% 100%;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <button onclick="change()">click</button>
+
+    <script>
+         var j = 0;
+        function change(){
+           
+            if(j % 2 == 0){
+                document.getElementsByClassName('box')[0].style.backgroundImage = 'url(https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6546218c64c1ff3366e1b62a_6546232c5920b90271b59349/scale_1200)'
+            }
+            else{
+                document.getElementsByClassName('box')[0].style.backgroundImage = 'url(https://s9.travelask.ru/uploads/post/000/016/386/main_image/full-c95abb3e41f5d9841be0d5dec4680569.jpg)'
+            }
+            j++;
+            console.log(j)
+        }
+    </script>
+</body>
+</html>
