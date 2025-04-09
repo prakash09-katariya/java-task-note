@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        .box{
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <button onclick="next()">Next</button>
+    <button onclick="pri()">pri</button>
+
+    <script>
+        var j=0;
+        function next(){
+            if(j % 2 == 0){
+                document.getElementsByClassName('box')[0].style.backgroundImage='url(https://avatars.mds.yandex.net/i?id=c667661550eea0b44fc437bc5b1091cd94a89f4b-5086971-images-thumbs&n=13)'
+            }
+            else{
+                document.getElementsByClassName('box')[0].style.backgroundImage='url(https://i.pinimg.com/originals/cb/8d/7a/cb8d7a8fa21284fce431ee0f1ac9e9a0.jpg)'
+            }
+            j++
+        }
+
+        function pri(){
+            document.getElementsByClassName('box')[0].style.backgroundImage='url(https://avatars.mds.yandex.net/i?id=c667661550eea0b44fc437bc5b1091cd94a89f4b-5086971-images-thumbs&n=13)'
+        }
+        
+    </script>
+</body>
+</html>

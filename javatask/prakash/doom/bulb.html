@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb-onn/off</title>
+    <style>
+        .box{
+            background-image:url(../img/pic_bulboff.gif);
+            background-size: cover;
+            width: 260px;
+            height:470px;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <button onclick="on()">ON</button>
+    <script>
+        var a=0;
+        function on(){
+           
+            if(a %2 ==0){
+                     document.getElementsByClassName('box')[0].style.backgroundImage='url(../img/pic_bulboff.gif)'
+            }
+            else{
+                 document.getElementsByClassName('box')[0].style.backgroundImage='url(../img/pic_bulbon.gif)'
+            }
+            a++
+        }
+    </script>
+</body>
+</html>

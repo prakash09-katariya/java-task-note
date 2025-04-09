@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .btn-1{
+            width: 150px;
+            height: 70px;
+            border: 1px solid black;
+            position: relative;
+            border-radius: 20px;
+        }
+        .btn-1::before{
+            content: 'OFF';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top:9px;
+            left: 10px;
+            background-color: red;
+            color: white;
+            animation: roted 2s ease  ;
+        }
+
+    
+
+        .btn-2{
+            width: 150px;
+            height: 70px;
+            border: 1px solid black;
+            position: relative;
+            border-radius: 20px;
+        }
+        .btn-2:before{
+            content: 'ON';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top:9px;
+            right: 10px;
+            background-color: red;
+            color: white;
+        }
+
+        .wrapper{
+            display: flex;
+            gap: 50px;
+        }
+
+        .box{
+            width: 150px;
+            height: 80px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: white;
+            position: relative;
+        }
+        .box .on{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid black;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 10px;
+            top: 16px;
+            background-color: green;
+            animation: roted 2s linear  infinite;
+            transform: translatex(50%);
+            visibility: hidden;
+        }
+        .bo:hover{
+            visibility: visible;
+        }
+
+        @keyframes roted {
+            100%{
+                transform: translatex(-50px);
+               
+            }
+        }
+        .box .off{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid black;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 10px;
+            top: 16px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <button class="btn-1" onclick="change()"></button>
+         <button class="btn-2" onclick="change()"></button>
+    </div>
+    
+    <div class="box">
+        <span class="off" onclick="chnage()">OFF</span>
+        <span class="on"onclick="chnage1()">ON</span>
+    </div>
+    <button onclick="chnage()">click</button>
+    
+    <script>
+        var j=0;
+        function chnage(){
+            document.getElementsByClassName('on')[0].style.backgroundColor='red';
+           
+              document.getElementsByClassName('on')[0].style.color='white';
+               document.getElementsByClassName('on')[0].style.right='10px';
+                document.getElementsByClassName('off')[0].style.innerText='off'
+                document.getElementsByClassName('off')[0].style.backgroundColor='green';
+
+            if(j % 2 == 0){
+                 document.getElementsByClassName('on')[0].style.visibility=''
+                 document.getElementsByClassName('on')[0].style.innerText='off';
+                 document.getElementsByClassName('on')[0].style.backgroundColor='red'
+            }
+            else{
+                  document.getElementsByClassName('off')[0].style.visibility='hidden'
+                   document.getElementsByClassName('on')[0].style.visibility='visable'
+                   document.getElementsByClassName('off')[0].style.backgroundColor='green'
+            }
+        }
+
+        function chnage1(){
+
+            if(j % 2 == 0){
+                 document.getElementsByClassName('off')[0].style.backgroundColor='green'
+            }
+            else{
+                   document.getElementsByClassName('on')[0].style.backgroundColor='red'
+            }
+           
+        }
+    </script>
+</body>
+</html>
