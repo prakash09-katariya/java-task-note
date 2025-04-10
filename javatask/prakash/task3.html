@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 650px;
+            height: 100px;
+            overflow: hidden;
+            background-color: azure;
+            color: black;
+            border-radius: 20px;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-100">
+        <div class="w-1140">
+            <div class="box">
+                <h1>d</h1>
+            </div>
+            <button onclick="first()">hello-good morning</button>
+            <button onclick="second()">hello-good afternoon</button>
+            <button onclick="third()">hello-good night</button>
+            <button onclick="four()">hello-good day</button>
+            <button onclick="five()">game over</button>
+        </div>
+    </div>
+
+    <script>
+       
+        function first(){
+            document.getElementsByTagName('h1')[0].innerText='hello-good morning';
+            document.getElementsByClassName('box')[0].style.backgroundColor='pink';
+            document.getElementsByTagName('h1')[0].style.color='blue';
+           
+        }
+        function second(){
+            document.getElementsByTagName('h1')[0].innerText='hello-good afternoon';
+            document.getElementsByClassName('box')[0].style.backgroundColor='blue';
+            document.getElementsByTagName('h1')[0].style.color='white';
+        }
+        function third(){
+            document.getElementsByTagName('h1')[0].innerText='hello-good night';
+            document.getElementsByClassName('box')[0].style.backgroundColor='green';
+        }
+        function four(){
+            document.getElementsByTagName('h1')[0].innerText='hello-good day';
+            document.getElementsByClassName('box')[0].style.backgroundColor='grey';
+        }
+        function five(){
+            document.getElementsByTagName('h1')[0].innerText='game over';
+            document.getElementsByClassName('box')[0].style.backgroundColor='white';
+            document.getElementsByTagName('h1')[0].style.color='black';
+        }
+    </script>
+</body>
+</html>

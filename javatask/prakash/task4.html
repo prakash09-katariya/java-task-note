@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    .w-100 {
+      width: 100%;
+    }
+
+    .w-576 {
+      width: 576px;
+      background-color: azure;
+      padding: 0 15px;
+    }
+
+    .nav .menu {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      position: relative;
+    }
+
+    .nav .menu a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 8px black;
+      z-index: 2;
+      background-color: white;
+    }
+
+    .nav .list {
+      padding-left: 0;
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 0;
+      background-color: white;
+      z-index: 1;
+    }
+
+    .nav .list.active {
+      display: block;
+    }
+
+    .nav .list li {
+      list-style: none;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    .nav .list li a {
+      width: 100%;
+      text-decoration: none;
+      display: block;
+      text-transform: capitalize;
+    }
+
+    .nav .list li:hover {
+      background-color: rgb(150, 141, 141);
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="w-100">
+    <div class="w-576">
+      <div class="nav">
+        <div class="menu" onclick="toggleMenu()">
+          <a href="javascript:void(0)"><i class="fa-solid fa-bars"></i></a>
+          <ul class="list">
+            <li><a href="#">home</a></li>
+            <li><a href="#">object</a></li>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">project</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".list").classList.toggle("active");
+    }
+
+    function remove(){
+        document.querySelector("menu").classList
+    }
+  </script>
+</body>
+</html>
