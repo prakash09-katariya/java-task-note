@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: bisque;
+        }
+        .display{
+            width: 250px;
+            height: 50px;
+            padding: 5px;
+            padding: 20ox;
+            background-color: rgb(240, 238, 238);
+        }
+        .display .form{
+            width: 95%;
+            height: 100%;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 0 10px black;
+            border-radius: 50px;
+
+        }
+        .wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            width: 260px;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="display">
+        <input type="text" class="form">
+    </div>
+    <div class="wrapper">
+        <button onclick="one()">1</button>
+        <button onclick="two()">2</button>
+        <button onclick="three()">3</button>
+        <button onclick="addition()" >+</button>
+        <button onclick="four()">4</button>
+        <button onclick="five()">5</button>
+        <button onclick="six()">6</button>
+        <button onclick="substraction()">-</button>
+        <button onclick="seven()">7</button>
+        <button onclick="eight()">8</button>
+        <button onclick="nine()">9</button>
+        <button onclick="multiplication()">*</button>
+        <button onclick="divided()" >/</button>
+        <button onclick="modual()">%</button>
+        <button onclick="po()">.</button>
+        <button onclick="equal()" >=</button>
+    </div>
+   <script>
+    function one(){
+        document.getElementsByClassName('display')[0].innerText='1'
+    }
+    function two(){
+        document.getElementsByClassName('display')[0].innerText='2'
+    }
+    function three(){
+        document.getElementsByClassName('display')[0].innerText='3'
+    }
+    function four(){
+        document.getElementsByClassName('display')[0].innerText='4'
+    }
+    function five(){
+        document.getElementsByClassName('display')[0].innerText='5'
+    }
+    function six(){
+        document.getElementsByClassName('display')[0].innerText='6'
+    }
+    function seven(){
+        document.getElementsByClassName('display')[0].innerText='7'
+    }
+    function eight(){
+        document.getElementsByClassName('display')[0].innerText='8'
+    }
+    function nine(){
+        document.getElementsByClassName('display')[0].innerText='9'
+    }
+    function addition(){
+        document.getElementsByClassName('display')[0].innerText='+'
+    }
+    function substraction(){
+        document.getElementsByClassName('display')[0].innerText='-'
+    }
+    function multiplication(){
+        document.getElementsByClassName('display')[0].innerText='*'
+    }
+    function equal(){
+        document.getElementsByClassName('display')[0].innerText='='
+    }
+    function divided(){
+        document.getElementsByClassName('display')[0].innerText='/'
+    }
+    function modual(){
+        document.getElementsByClassName('display')[0].innerText='%'
+    }
+    function po(){
+        document.getElementsByClassName('display')[0].innerText='.'
+    }
+     
+     
+     
+   </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            border: 1px solid black;
+            padding: 10px;display: flex;
+            justify-content: space-between;
+            border-radius: 20px;
+        }
+        .off{
+            box-shadow: 0 0 5px black;
+            padding: 2px;
+            border: 0;
+            border-radius: 50px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* transition: transform 0.5s ease-in-out; */
+            /* animation: right 1s ease-in-out forwards; */
+        }
+
+        @keyframes right {
+            
+            100%{
+                transform: translatex(0px);
+                background-color: red;
+            }
+
+            0%{
+                transform: translatex(-60px);
+                background-color: red;
+            }
+        }
+        .on{
+            box-shadow: 0 0 5px black;
+            padding: 2px;
+            border: 0;
+            border-radius: 50px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* animation: left 2s ease-in-out forwards;
+            transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out; */
+        }
+        @keyframes left {
+            
+            0%{
+                transform: translateX(0px);
+                background-color: red;
+            }
+
+            100%{
+                transform: translateX(-60px);
+                background-color: green;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <button onclick="up()" class="off">off</button>
+        <button onclick="move()" class="on">on</button>
+    </div>
+    
+  <script>
+
+    var j=0;
+    function move(){
+             document.getElementsByClassName('on')[0].style.backgroundColor='green';
+            document.getElementsByClassName('on')[0].style.animation ='left 2s ease-in-out forwards '
+            document.getElementsByClassName('on')[0].style.innerText='off'
+            document.getElementsByClassName('on')[0].style.color='white';
+            document.getElementsByClassName('off')[0].style.display='hidden';
+        }
+        
+
+    function up(){
+             document.getElementsByClassName('off')[0].style.backgroundColor='red';
+             document.getElementsByClassName('off')[0].style.color='white';
+             document.getElementsByClassName('off')[0].style.innerText='on'
+            document.getElementsByClassName('off')[0].style.animation ='right 2s ease-in-out forwards;'
+            document.getElementsByClassName('on')[0].style.display='hidden';
+    }
+
+   
+  
+  </script>
+</body>
+</html>

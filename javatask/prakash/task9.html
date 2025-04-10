@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .w-100{
+        width: 100%;
+    }
+    .container{
+        width: 1140px;
+        margin: 0 auto;
+    }
+    .coursetab .tabsfirst .nav{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .coursetab .tabsfirst .nav .nav-items{
+        list-style: none;
+        position: relative;
+    }
+    .coursetab .tabsfirst .nav .nav-items:hover::before{
+        width: 100%;
+    }
+
+    .coursetab .tabsfirst .nav .nav-items .nav-link{
+        background-color: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+        text-align: center;
+        text-transform: capitalize;
+        padding: 30px;
+        font-size: 19px;
+        text-decoration: none;
+        box-shadow: 0 0 10px black;
+        background-color: black;
+        color: white;
+        display: block;
+       
+    }
+
+    .coursetab .tabsfirst .nav .nav-items::before{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: blue;
+        bottom: 0;
+        animation: width 2s ese forwards;
+    }
+
+    .coursetab .tabsfirst .nav .nav-items .nav-link:hover{
+        color: yellow;
+    }
+
+    .overview-section ,.course-section,.career-section,.reviews-section{
+        width: 100%;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+</style>
+</head>
+<body>
+    <div class="w-100">
+        <div class="conatiner">
+            <div class="coursetab">
+                <div class="tabsfirst">
+                    <ul class="nav">
+                        <li class="nav-items"><a onclick="verview()" area-controls="overview" area-selected="false" role="tab" class="nav-link" id="overview-1" href="#overview">Overview</a></li>
+                        <li class="nav-items"><a onclick="second()" class="nav-link" href="#Course">Course Cover</a></li>
+                        <li class="nav-items"><a class="nav-link" href="#Career">Career Opportunities</a></li>
+                        <li class="nav-items"><a class="nav-link" href="#reviews">reviews</a></li>
+                    </ul>
+                </div>
+            <div class="tab-content">
+                <section id="overview" class="overview-section" aria-labelledby="overview-1" role="tabapanel1">
+                    <h1>hello-overview</h1>
+                </section>
+                <section id="Course" class="course-section"aria-labelledby="overview">
+                    <h1>course-section</h1>
+                </section>
+                <section id="Career" class="career-section">
+                    <h1>career-section</h1>
+                </section>
+                <section id="reviews" class="reviews-section">
+                    <h1>reviews-section</h1>
+                </section>
+</div>
+              
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function verview(){
+            document.getElementsByTagName('h1')[0].style.innerText='Overview'
+        }
+
+        function second(){
+            document.getElementsByTagName('h1')[1].style.innerText='katariya'
+        }
+    </script>
+</body>
+</html>

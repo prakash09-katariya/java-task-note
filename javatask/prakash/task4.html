@@ -42,6 +42,7 @@
       right: 0;
       background-color: white;
       z-index: 1;
+      width: 100%;
     }
 
     .nav .list.active {
@@ -72,7 +73,8 @@
     <div class="w-576">
       <div class="nav">
         <div class="menu" onclick="toggleMenu()">
-          <a href="javascript:void(0)"><i class="fa-solid fa-bars"></i></a>
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+          <a href="#"><i class="fa-solid fa-xmark"></i></a>
           <ul class="list">
             <li><a href="#">home</a></li>
             <li><a href="#">object</a></li>
@@ -88,6 +90,7 @@
   <script>
     function toggleMenu() {
       document.querySelector(".list").classList.toggle("active");
+      
     }
 
     function remove(){
