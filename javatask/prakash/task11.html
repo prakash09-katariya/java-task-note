@@ -3,29 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>button</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<!-- <body>
-    <h1>Switch Button</h1>
-    <label onclick="check()" class="onoffbtn"><input type="checkbox"></label> -->
+    <title>Document</title>
+    <style>
+            .box {
+                width: 100px;
+                height: 45px;
+                background-color:green;
+                position: relative;
+                border-radius: 50px;
+            }
 
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div>
-
-    <script>
-        function check(){
-            document.getElementsByClassName('onoffbtn')[0].style.animation='left 2s ease-in-out forwards';
+    .box1 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50pc;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            transition: left 2s;
         }
-      
+
+    .move-right {
+        left: 55px;
+        background-color: white;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .move-left {
+        right:55px;
+        background-color: red;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-1{
+        background-color: green;
+        color: white;
+        margin-top: 10px;
+    }
+    .btn-2{
+        background-color: red;
+        color: rgb(0, 0, 0);
+        margin-top: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">OFF</div>
+    </div>
+    
+    <button class="btn-1" onclick="changeState()">ON</button>
+    <button class="btn-2" onclick="changeState1()">OFF</button>
+    <script>
+      function changeState() {
+        const box = document.getElementsByClassName('box1')[0];
+        box.innerText = 'ON';
+        box.classList.add('move-right');
+        box.backgroundColor='green'
+    }
+    function changeState1() {
+        const box = document.getElementsByClassName('box1')[0];
+        box.innerText = 'Off';
+        box.classList.add('move-left');
+        box.backgroundColor='red'
+    }
     </script>
 </body>
 </html>
