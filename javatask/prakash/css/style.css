@@ -1,0 +1,49 @@
+h1{
+    color:#000;
+    padding-bottom:40px;
+  }
+  .onoffbtn{
+    width:60px;
+    height:30px;
+    border-radius:15px;
+    background:#000;
+    display:block;
+    position:relative;
+  }
+  .onoffbtn:after{
+    position:absolute;
+    height:28px;
+    width:28px;
+    display:block;
+    border-radius:50%;
+    background:green;
+    top:1px;
+    left:1px;
+    content:'off';
+    text-align:center;
+    line-height:29px;
+    color:#fff;
+    font-size:12px;
+  }
+  .onoffbtn.active:after{
+    left:100%;
+    margin-left:-29px;
+    background:#39e639;
+    content:'on';
+  }
+  .onoffbtn input[type="checkbox"]{
+    opacity:0;
+  }
+
+  @keyframes left {
+            
+    100%{
+        transform: translatex(0px);
+        background-color: red;
+    }
+
+    0%{
+        transform: translatex(60px);
+        background-color: red;
+    }
+}
