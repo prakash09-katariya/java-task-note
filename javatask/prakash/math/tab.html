@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        .container{
+            max-width: 900px;
+        }
+        .tab{
+            max-width: 900px;
+            background-color: beige;
+            padding: 10px ;
+            display: flex;
+            justify-content: space-between;
+        }
+        .tab .btn{
+            padding: 10px 40px;
+            border: 0;
+            display:inline-block;
+            position: relative;
+        }
+        .tab .btn:active{
+            border-bottom: 2px solid blue;
+        }
+        .tab .btn::before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height: 2px;
+            background-color: blue;
+            bottom: -15px;
+            left: 0;
+            display: none;
+           
+        }
+        .tab .btn:active::before{
+            width: 100%;
+            display: block;
+        }
+        .tab .btn:hover{
+            background-color: blue;
+            color: white;
+        }
+        .tab .btn:active{
+            background-color: aqua;
+            color: black;
+        }
+        .wrapp{
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tab">
+            <button onclick="change()" class="btn ">tab-1</button>
+            <button onclick="second()" class="btn">tab-2</button>
+            <button onclick="third()" class="btn">tab-3</button>
+        </div>
+        <div class="wrapp">
+            
+                <div class="tab-1">
+                    <h1>tab-1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione sint, eius, voluptas unde laboriosam alias repellendus architecto dolorem, aliquam perferendis nesciunt? Corrupti debitis aliquam consequatur ratione officiis assumenda architecto optio quaerat animi nulla, minus magni nisi fugit nam explicabo molestias, nemo ex velit sint quia. Earum in, quibusdam nobis aliquam dolores sint eligendi suscipit neque nihil, voluptas culpa, doloremque nemo velit possimus ad itaque magni maxime reprehenderit magnam sequi tempora impedit architecto. Itaque expedita repudiandae veniam soluta maiores cumque velit quisquam enim quaerat iusto cum consequatur, provident inventore doloribus nulla natus, amet saepe doloremque, harum magnam. Nihil, ipsam impedit!</p>
+
+                </div>
+                <div class="tab-2 hide">
+                    <h1>tab-2</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione sint, eius, voluptas unde laboriosam alias repellendus architecto dolorem, aliquam perferendis nesciunt? Corrupti debitis aliquam consequatur ratione officiis assumenda architecto optio quaerat animi nulla, minus magni nisi fugit nam explicabo molestias, nemo ex velit sint quia. Earum in, quibusdam nobis aliquam dolores sint eligendi suscipit neque nihil, voluptas culpa, doloremque nemo velit possimus ad itaque magni maxime reprehenderit magnam sequi tempora impedit architecto. Itaque expedita repudiandae veniam soluta maiores cumque velit quisquam enim quaerat iusto cum consequatur, provident inventore doloribus nulla natus, amet saepe doloremque, harum magnam. Nihil, ipsam impedit!</p>
+                    
+                </div>
+                <div class="tab-3 hide">
+                    <h1>tab-3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione sint, eius, voluptas unde laboriosam alias repellendus architecto dolorem, aliquam perferendis nesciunt? Corrupti debitis aliquam consequatur ratione officiis assumenda architecto optio quaerat animi nulla, minus magni nisi fugit nam explicabo molestias, nemo ex velit sint quia. Earum in, quibusdam nobis aliquam dolores sint eligendi suscipit neque nihil, voluptas culpa, doloremque nemo velit possimus ad itaque magni maxime reprehenderit magnam sequi tempora impedit architecto. Itaque expedita repudiandae veniam soluta maiores cumque velit quisquam enim quaerat iusto cum consequatur, provident inventore doloribus nulla natus, amet saepe doloremque, harum magnam. Nihil, ipsam impedit!</p>
+                    
+                </div>
+        </div>
+    </div>
+
+    <script>
+        function change(){
+            document.getElementsByClassName("tab-1")[0].style.display="block"
+            document.getElementsByClassName("tab-2")[0].style.display="none"
+            document.getElementsByClassName("tab-3")[0].style.display="none"
+            document.getElementsByClassName("btn")[0].style.textDecoration="underline"
+            document.getElementsByClassName("btn")[1].style.textDecoration="none"
+            document.getElementsByClassName("btn")[2].style.textDecoration="none"
+        }
+
+        function second(){
+            document.getElementsByClassName("tab-2")[0].style.display="block"
+            document.getElementsByClassName("tab-1")[0].style.display="none"
+            document.getElementsByClassName("tab-3")[0].style.display="none"
+            document.getElementsByClassName("btn")[1].style.textDecoration="underline"
+            document.getElementsByClassName("btn")[0].style.textDecoration="none"
+            document.getElementsByClassName("btn")[2].style.textDecoration="none"
+        }
+        function third(){
+            document.getElementsByClassName("tab-3")[0].style.display="block"
+            document.getElementsByClassName("tab-1")[0].style.display="none"
+            document.getElementsByClassName("tab-2")[0].style.display="none"
+            document.getElementsByClassName("btn")[2].style.textDecoration="underline"
+            document.getElementsByClassName("btn")[0].style.textDecoration="none"
+            document.getElementsByClassName("btn")[1].style.textDecoration="none"
+        }
+      
+    </script>
+</body>
+</html>
