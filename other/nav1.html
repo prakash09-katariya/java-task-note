@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            width: 576px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-link:hover.nav{
+            visibility: visible;
+        }
+        .logo-link1:hover.nav{
+            visibility: visible;
+        }
+        .logo-link{
+            display: flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        nav{
+            background-color: aquamarine;
+            animation:hover 2s ease-out forwards;
+            animation: left 2s ease-out forwards;
+            position: relative;
+            right: 0%;
+            left: 0%;
+        }
+
+        @keyframes hover {
+            100%{
+               
+                right: 100%;
+            }
+        }
+        @keyframes left {
+            100%{
+               
+                left: -100%;
+            }
+        }
+        nav ul li{
+            list-style: none;
+        }
+        nav ul li a{
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <a class="logo-link" href=""><i class="fa-solid fa-xmark"></i></a>
+            <a class="logo-link1" href=""><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">HOme</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">COntact</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Pages</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

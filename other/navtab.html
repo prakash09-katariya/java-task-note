@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>nav-tab</title>
+  <script src="../javatask/prakash/js/jquery.min.js"></script>
+  <style>
+    .tab {
+      width: 100%;
+      background-color: beige;
+      padding: 10px 0;
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+    }
+
+    .tab-btn:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    .tab-btn:active {
+      background-color: rgb(42, 42, 250);
+      color: white;
+      cursor: pointer;
+    }
+
+    .tab-content {
+      border: 1px solid black;
+      padding: 10px;
+      max-width: 900px;
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="tab">
+    <button class="tab-btn active" data-tab="tab1">tab1</button>
+    <button class="tab-btn" data-tab="tab2">tab2</button>
+    <button class="tab-btn" data-tab="tab3">tab3</button>
+  </div>
+  <div id="tab1" class="tab-content active">
+    <h2>tab1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+  </div>
+  <div id="tab2" class="tab-content">
+    <h2>tab2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+  </div>
+  <div id="tab3" class="tab-content">
+    <h2>tab3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, unde praesentium animi consectetur nostrum corporis in molestias aut, ut vero quia et. Sed quam, impedit et facere perspiciatis dolores aliquam accusantium minima animi dolorum recusandae minus, nostrum illum corporis eum vitae quo laborum quasi praesentium soluta non quidem sunt maiores? Facilis, maxime. Repudiandae facere laborum asperiores maxime obcaecati itaque ullam nobis molestiae neque dicta quae adipisci velit, est fugit officia saepe unde hic libero doloribus corporis quia nemo aliquid porro? Veritatis hic ipsam vel, natus minus nemo nobis et incidunt, accusamus vero enim quidem quibusdam, voluptatum maiores aut. At, omnis?</p>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $(".tab-btn").click(function () {
+        $(".tab-btn").removeClass("active");
+        $(this).addClass("active");
+
+        var tabId = $(this).data("tab");
+        $(".tab-content").removeClass("active");
+        $("#" + tabId).addClass("active");
+      });
+    });
+  </script>
+</body>
+</html>
