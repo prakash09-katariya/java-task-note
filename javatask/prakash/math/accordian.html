@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        p{
+            display: none;
+        }
+        .wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: beige;
+        }
+        .wrapper span{
+            display: block;
+        }
+        h1{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div class="wrapper">
+            <h3 >first</h3>
+            <span onclick="change()"><i class="fa-solid fa-caret-down"></i></span>
+           
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, eaque. Rerum consequatur exercitationem dignissimos cupiditate saepe eius quibusdam adipisci velit corrupti, ratione qui! Officia exercitationem dolorem rem nam eligendi. Nostrum aperiam odio facilis soluta molestiae. Iste similique inventore reprehenderit perferendis quam dolorem recusandae. Quaerat, sit! Cum nam quisquam quae dolor labore harum eligendi magni, nihil praesentium repudiandae est sunt in, eaque error commodi dolores dignissimos quis sapiente ipsa ipsum voluptas quibusdam consectetur voluptate? Ipsam, ducimus! Accusantium ab amet eveniet laborum unde, culpa deleniti quis consequatur doloremque assumenda blanditiis quasi vitae quas! Temporibus quibusdam eligendi veritatis odio fugiat laborum quo fuga.</p>
+    </div>
+    <script>
+           var j=0;
+        function change(){
+      
+            
+            if( j%2 == 0){
+                document.getElementsByTagName('p')[0].style.display='block'
+            }
+            else{
+                document.getElementsByTagName('p')[0].style.display='none'
+            }
+            j++
+        }
+        
+    </script>
+</body>
+</html>

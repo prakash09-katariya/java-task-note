@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            background-color: aqua;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+        ul li{
+            text-decoration: none;
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0 0 5px black;
+        }
+        ul li:hover{
+            box-shadow: 0 0 10px rgb(238, 236, 236);
+            cursor: pointer;
+            background-color: rgb(80, 79, 79);
+            color: white;
+        }
+        .box{
+            width:calc(33% - 20px);
+
+        }
+        .box img{
+            width: 100%;
+            object-fit: cover;
+        }
+        .wrapper{
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            justify-content: space-between;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li onclick="change()">first</li>
+        <li onclick="change1()">second</li>
+        <li onclick="change2()">third</li>
+    </ul>
+
+    <div class="first hide">
+        <div class="wrapper">
+            <div class="box">
+                <img src="https://www.thesun.co.uk/wp-content/uploads/2020/01/NINTCHDBPICT000307961384.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://i.pinimg.com/originals/3d/ab/6a/3dab6a0183a13ba2c7a81d454a7c9b3a.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://www.yurtgazetesi.com.tr/d/news/223836.jpg" alt="">
+            </div>
+        </div>
+        <h1>welcome-number-first</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium cumque asperiores nisi eos incidunt molestiae odio cupiditate blanditiis assumenda eius sed omnis atque voluptatem, id recusandae ea unde, dolor quod voluptatibus obcaecati fugiat reprehenderit eveniet aut? Quam dolorum animi, dolor hic, veritatis quidem blanditiis harum adipisci voluptatibus repellendus architecto molestias, rem perferendis ea! Velit itaque fugiat laudantium accusantium nostrum? Porro error perferendis ut illo cupiditate minus necessitatibus. Odio quae nam eligendi animi sunt sint ducimus hic minima beatae voluptate, autem rerum quod natus quos optio? Nostrum hic, vitae blanditiis ducimus est pariatur maxime facere in animi, ut ab consequatur.</p>
+    </div>
+
+    <div class="second hide">
+        <div class="wrapper">
+            <div class="box">
+                <img src="https://cdn.yenicaggazetesi.com.tr/other/2024/09/18/londra1.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1uTSvI.img?w=1860&h=1200&m=4&q=74" alt="">
+            </div>
+            <div class="box">
+                <img src="https://attaches.1001tur.ru/editor/1024-0_lgmf179eddd7-image__172838674416.jpg" alt="">
+            </div>
+        </div>
+        <h1>welcome-number-second</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum delectus adipisci, omnis corporis atque ducimus itaque voluptatum quis necessitatibus, dicta quos laboriosam suscipit vero soluta tenetur minus consequuntur error nam, minima ipsam eligendi tempore. Qui dolor recusandae corrupti atque tempora, veniam cupiditate modi. Illum perferendis et illo cupiditate corporis natus.</p>
+    </div>
+
+    <div class="third hide">
+        <div class="wrapper">
+            <div class="box">
+                <img src="https://i.pinimg.com/originals/85/ed/07/85ed0748e0f73a4de70e58be8f6dc330.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://i.pinimg.com/originals/3d/ab/6a/3dab6a0183a13ba2c7a81d454a7c9b3a.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="https://s1.1zoom.ru/big3/487/Sky_Evening_France_Eiffel_Tower_Paris_From_above_520603_5416x3611.jpg">
+            </div>
+        </div>
+        <h1>welcome-number-third</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam obcaecati vero libero placeat quas exercitationem. Similique, obcaecati libero vitae perspiciatis corrupti ad architecto est ea illo officiis beatae perferendis quod illum sed doloremque accusantium, aspernatur ratione veritatis expedita iusto repellendus? Odio illo ratione dolorum asperiores laborum quia repellendus perferendis totam at. Rerum voluptate doloremque ratione expedita eveniet, fuga molestiae maxime unde? Dolorum explicabo quia maiores et ratione nam soluta delectus ipsam architecto repellendus quisquam quidem quibusdam, veritatis sit commodi optio consequatur sequi? Pariatur odit dicta similique sequi quod, laborum, voluptatum beatae iste voluptatem commodi blanditiis sint distinctio at iusto impedit, doloremque vitae ad consequuntur totam fugiat itaque exercitationem culpa. Voluptas delectus amet natus architecto! Voluptatem, veritatis. Sapiente maiores libero, vitae at veniam corrupti nostrum quas laudantium numquam unde culpa exercitationem tempore magni. Explicabo doloremque totam fugiat minus corporis consectetur soluta eaque reprehenderit a accusantium consequuntur consequatur, asperiores incidunt molestias natus.</p>
+    </div>
+
+    <script>
+        function change(){
+            document.getElementsByClassName('first')[0].style.display='block'
+            document.getElementsByClassName('second')[0].style.display='none'
+            document.getElementsByClassName('third')[0].style.display='none'
+        }
+        
+
+        function change1(){
+            document.getElementsByClassName('second')[0].style.display='block'
+            document.getElementsByClassName('first')[0].style.display='none'
+            document.getElementsByClassName('third')[0].style.display='none'
+        }
+        function change2(){
+            document.getElementsByClassName('third')[0].style.display='block'
+            document.getElementsByClassName('first')[0].style.display='none'
+            document.getElementsByClassName('second')[0].style.display='none'
+        }
+    </script>
+</body>
+</html>

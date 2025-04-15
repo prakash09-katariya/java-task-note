@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!-- font-awsome-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- customise-css-link -->
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="w-100">
+            <div class="logo">
+                <div onclick="closes()" class="menu1" ><i class="fa-solid fa-xmark"></i></div>
+                <div onclick="openn()" class="menu" ><i class="fa-solid fa-bars"></i></div>
+            </div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Contact Us</li>
+                </ul>
+            </nav>
+    </div>
+    <script>
+        function openn(){
+            document.getElementsByTagName('nav')[0].style.height='250px';
+        }
+        function closes(){
+            document.getElementsByTagName('nav')[0].style.height='0px';
+        }
+    </script>
+</body>
+</html>

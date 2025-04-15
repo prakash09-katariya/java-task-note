@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 70px;
+            height: 30px;
+            background-color: black;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+       .off{
+            height: 30px;
+            background-color: white;
+            width: 30px;
+            border-radius: 50px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .on{
+            height: 30px;
+            background-color: white;
+            width: 30px;
+            border-radius: 50px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .hide{
+            visibility: hidden;
+        }
+        .box1{
+            width: 150px;
+            height: 300px;
+            border-radius: 200px;
+            background-color: black;
+            margin: auto;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div onclick="check()" class="off">off</div>
+        <div onclick="pri()" class="on hide">on</div>
+
+       
+    </div>
+    <div class="box1"></div>
+
+    <script>
+        function check(){
+            document.getElementsByClassName('on')[0].style.visibility='visible'
+            document.getElementsByClassName('off')[0].style.visibility='hidden'
+            document.getElementsByClassName('box')[0].style.backgroundColor='red'
+            document.getElementsByTagName('body')[0].style.backgroundColor='pink'
+            document.getElementsByClassName('box1')[0].style.backgroundColor='blue'
+        }
+
+        function pri(){
+                document.getElementsByClassName('on')[0].style.visibility='hidden'
+                document.getElementsByClassName('off')[0].style.visibility='visible'
+                 document.getElementsByClassName('box')[0].style.backgroundColor='green'
+                  document.getElementsByTagName('body')[0].style.backgroundColor='yellow'
+                  document.getElementsByClassName('box1')[0].style.backgroundColor='black'
+        }
+    </script>
+</body>
+</html>
