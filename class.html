@@ -1,0 +1,777 @@
+
+// arrow function
+
+// const arrowFunction = () => {
+//     console.log("check arrow function");
+// }
+// arrowFunction();
+
+
+// immdiately invoked function
+
+// (function(){
+//     console.log("check");
+// })()
+
+// closures function
+
+
+// function myOuter()
+// {
+//     var a=12
+//     function myInner()
+//     {
+//         console.log(a);
+//     }
+//     myInner()
+// }
+// myOuter()
+
+// callback function
+
+function myFunction(name , callback)
+{
+    console.log("check that function..." + name);
+    callback()
+}
+function callback()
+{
+    var a=90;
+    console.log("check callback data" + a);
+    
+}
+myFunction("demo" , callback) //pass function
+
+
+</script>
+15/4/25
+
+<script>
+
+    // const array = [12, 234, 34]
+
+    // document.write(array[0])
+
+    // for ... of
+
+    // for (var item of array) {
+    //     document.write("<br>" + item)
+    // }
+
+
+
+    // object => key : value
+    // for ... in
+    // object => value get [ . ]
+
+    // const obj = {name : "demo" , age : 23}
+
+    // document.write(obj.name)
+    // document.write(obj.age)
+
+    // for(var item in obj)
+    // {
+    //     document.write("<br>"+obj[item])
+    // }
+
+    // delete obj.name
+    // delete obj.age
+
+    // console.log(obj);
+
+
+
+    // destructuring
+
+    // const object = {name : "demo" , age : 23 , no : 78456132}
+
+    // const {name , age , no} = object
+
+    // console.log(name);
+    // console.log(age);
+    // console.log(no);
+
+
+
+    // spread op => [...] => duplicate
+
+    // const arr = [12,23,34]
+
+    // const duplicateArray = [...arr]
+
+    // console.log(duplicateArray);
+
+    // rest op [...] data -> part
+
+
+    // const obj = {name : "demo" , age : 23 , no : 78456132 , data : "cdmi"}
+
+    // const {name , data , ...rest} = obj
+
+    // console.log(name);
+    // console.log(data);
+    // console.log(rest);
+    
+</script>
+
+11/4/25
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <button onclick="Stopp()">stop</button>
+
+
+    <script>
+        // function data(){
+        //     console.log("hello");
+            
+        // }
+        // setTimeout(data, 3000)
+
+
+
+
+        // function text(){
+        //     console.log("hello");
+            
+        // }
+
+    // var  data =  setInterval(text , 2000)
+
+    // function Stopp(){
+    //     clearInterval(data)
+    // }
+
+
+    // console.log(Math.min(10,20,30,40,50));
+    // console.log(Math.max(10,20,30,40,50));
+
+        // console.log(Math.random());
+        // console.log(Math.ceil(9.49));
+        // console.log(Math.floor(9.49));
+        // console.log(Math.round(9.51));
+        
+
+        // var data = "hello world"
+
+        // console.log(data.charAt("6"));
+        
+        // var text = data.concat(" welcome")
+        // console.log(text);
+
+        // console.log(data.startsWith("hello"));
+        // console.log(data.endsWith("world"));
+        
+        // console.log((data.includes("z")));
+        
+        
+        var data = [10,20,30,40,50]
+        // console.log(data.at(2));
+
+        // var text = data.push(60, 70)
+        // console.log(data);
+        
+
+        // data.pop()
+        // data.pop()
+
+        // console.log(data);
+
+        console.log(data.fill(50,2,4));
+        
+        
+        
+    
+
+
+    </script>
+
+
+</body>
+</html>
+
+7/4/25
+
+<script>
+    function changeFunction()
+    {
+        // alert()
+        document.getElementsByClassName('box')[0].style.backgroundImage='url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ718nztPNJfCbDJjZG8fOkejBnBAeQw5eAUA&s)'
+    }
+</script>
+
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s');
+        background-size: 100% 100%;
+    }
+</style>
+
+<div class="box"></div>
+
+<button onclick="changeFunction()">CLICK</button>
+  
+====================
+
+<script>
+    var i = 1
+    function myCount() {
+        // alert(i)
+        if (i == 2) {
+            document.getElementById('changeColor').style.color = "red"
+        }
+        i++
+    }
+
+    var j = 0
+
+    function myFunction() {
+        if (j % 2 == 0) {
+            document.getElementById('changeColor').style.color="red"
+        }
+        else {
+            document.getElementById('changeColor').style.color="black"
+        }
+        j++;
+    }
+</script>
+
+<h1 id="changeColor">Hello</h1>
+
+<button onclick="myCount()">Click</button>
+
+<button onclick="myFunction()">change odd-even</button>
+
+=============
+
+Task work
+
+1. one image 
+=> create 2 button
+=> if press 1 then change image 
+=> if press 2 then get original image
+
+2. bulb on-off
+
+=======================
+
+4/4/25
+
+<script>
+    function myFunction()
+    {
+        // alert()
+        document.getElementById('html').innerHTML='<i>Hello</i>'
+        document.getElementById('text').innerText='Hello creative'
+    }
+
+    
+    function myCssFunction()
+    {
+        var st = document.getElementById('applyCSS')
+        var e = document.getElementById('changeCSS')
+
+        st.innerText='Creative'
+        st.style.color='white'
+        st.style.backgroundColor='green'
+        st.style.fontSize='50px'
+
+        e.style.color='green'
+    }
+
+    // background-color
+    // Font-size
+
+</script>
+
+<h1 id="html">Change HTML</h1>
+<h2 id="text">Change Text</h2>
+
+<p id="applyCSS">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima aut aliquid fugit blanditiis repellendus cum at, est cupiditate perspiciatis doloremque totam nobis non facilis commodi nemo quasi laudantium nulla laborum?</p>
+
+<h1>Hello</h1>
+
+<h3 id="changeCSS">Hello</h3>
+
+<button onclick="myFunction()">CLICK</button>
+
+<button onclick="myCssFunction()">Apply CSS</button>
+
+3/4/25
+
+<script>
+    // user = 3-1 => 9
+    let array = [[1, 21], [4, 5]]
+    var sum = 0
+    var sum1 = 0
+
+    // 1   21     78
+    // 0,0  0,1   0,2
+    // 4   5    90
+    // 1,0  1,1  1,2
+    // 12    34   45
+    // 2,0   2,1  2,2
+
+    for (var i = 0; i < array.length; i++) {
+        for (var j = 0; j < array.length; j++) {
+            if (i == j) {
+                sum = sum + array[i][j]
+            }
+            if (i + j == 1) {
+                sum1 = sum1 + array[i][j]
+            }
+        }
+    }
+    document.write("sum ==> ", sum)
+    document.write("<br>sum ==> ", sum1)
+
+
+
+</script>
+
+================================
+
+
+
+<!-- event [click , double click , mouse]  -->
+ <!-- dom => document object model -->
+
+ <!-- selector => tagname[index] [multi time use], classname[index][multi time use] , id name[one time use] -->
+
+ <!-- innerText , innerHtml [Html tag apply] -->
+
+<script>
+
+</script>
+
+
+<h1>Hello</h1>
+<h1>Hello</h1>
+<h1>Hello</h1>
+<h1>Hello</h1>
+
+<p class="change">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quisquam nihil ut doloremque, vero libero atque perspiciatis suscipit quae, similique eligendi alias eos iste deserunt rem rerum. Dicta, cum voluptatum.</p>
+
+
+<span id="cdmi">HEllo</span>
+<span id="cdmi1">HEllo</span>
+
+<br><br>
+
+
+<button onclick="document.getElementsByTagName('h1')[1].innerText='good morning'">good morning</button>
+
+<button onclick="document.getElementsByClassName('change').innerHTML='<b>CREATIVE</b>'">Change Paragraph</button>
+
+<button onclick="document.getElementById('cdmi').innerHTML='<i>Text Italic</i>'">Change using ID</button>
+
+<button onclick="document.getElementById('cdmi1').innerHTML='<i>Text Italic</i>'">Change using ID</button>
+
+
+
+
+1/4/25
+<script>
+    var array = [[12,23] , [45,56]]
+
+    // document.write(array[0][0])
+
+    for(var i=0 ; i<array.length ; i++)
+{
+    for(var j=0 ; j<array.length ; j++)
+{
+    document.write("<br>",array[i][j])
+}
+}
+document.write("<br><br>")
+for(var i=0 ; i<array.length ; i++)
+{
+    for(var j=0 ; j<array.length ; j++)
+{
+    document.write("&nbsp&nbsp",array[i][j])
+}
+document.write("<br>")
+}
+
+</script>
+
+
+31/3/25
+
+<script>
+    var a=12
+    var b=90
+
+    //  + => string oprator
+    document.write("Total = "+a+b)
+    document.write("<br>Total = "+(a+b))
+    document.write("<br>Total = ",a+b)
+</script>
+
+<script>
+    var array = [12,90]
+
+    var count = array.length
+    document.write(count)
+    // document.write(array[0])
+    // document.write(array[1])
+    // document.write(array[2])
+
+    var sum = 0
+    for(var i=0 ; i<array.length ; i++)
+{
+    document.write("<br>"+array[i])
+}
+
+for(var i=0 ; i<array.length ; i++)
+{
+    sum = sum + array[i]
+}
+document.write("<br>"+sum)
+</script>
+
+27/3/25
+
+<script>
+
+    // UDF - user define function
+
+    // no argu, no return
+
+    // function printMsg()
+    // {
+    //     document.write("Hello")
+    // }
+    // printMsg()
+
+    // with argu , no return
+
+    // function getValue(a , b)
+    // {
+    //     total = a+b
+    //     document.write(total)
+    // }
+    // getValue(12,45)
+
+    // no argu , with return
+
+    // function getSqr()
+    // {
+    //     return 5+*5
+    // }
+//    document.write(getSqr())
+
+//    const st = getSqr() * 10
+//    document.write(st)
+
+// const store = getSqr()
+// const multi = store * 10
+// document.write(multi)
+
+// with argu , with return
+
+
+function getReturn(a , b)
+{
+    return a*b
+}
+const a = parseInt(prompt("Enter A = "))
+const b = parseInt(prompt("Enter B = "))
+const st = getReturn(a , b)
+document.write(st)
+
+</script>
+
+
+
+
+
+25/3/25
+
+	Re-assign	Re-declare
+
+
+var	true		true
+
+let	true		false
+
+const	false		false
+
+
+
+pop box
+
+=> alert
+=> propmt => user input
+=> confirm => permission
+
+
+
+2 value => prompt => a,b
+choice => + , -, * , /
+
+<script>
+
+
+    // var a=12
+
+    // var a=90
+
+    // console.log(a);
+
+    // let a=90
+    // let a=89
+
+    // let b=90
+
+    // console.log(a);
+
+    // const a=90
+
+    // const a=89
+
+    // console.log(a);
+
+    // alert("Hello")
+
+    // string
+    // const a = parseInt(prompt("Enter A :- "))
+    // const b = parseInt(prompt("Enter B :-"))
+
+    // total = a+b
+    // document.write(total)
+
+    // confirm box - boolean [true , false]
+
+    const permission = confirm("Do you want to exit ???")
+
+    // document.write(permission)
+
+    if(permission == true)
+{
+    document.write("yes")
+}
+else
+{
+    document.write("No")
+}
+    
+    
+    
+
+</script>
+
+24/3/25
+
+<script>
+
+    /*
+    
+        1
+       1 2
+      1 2 3
+     1 2 3 4
+    1 2 3 4 5
+    
+    */
+
+    for (var i = 1; i <= 5; i++) {
+        for(var k = 5 ; k>=i ; k--)
+    {
+        document.write("&nbsp;&nbsp;")
+    }
+        for (var j = 1; j <= i; j++) {
+            document.write("&nbsp;&nbsp;"+j)
+        }
+        document.write("<br>")
+    }
+
+</script>
+
+=================
+
+
+    1
+   2 2
+  3 3 3
+ 4 4 4 4
+5 5 5 5 5
+ 4 4 4 4
+  3 3 3
+   2 2
+    1
+
+
+1
+2 3
+4 5 6
+7 8 9 10
+
+
+1
+2 4 6
+3 6 9 12
+
+
+1
+4 9
+16 25 36
+
+    1
+   1 0
+  1 0 1
+ 1 0 1 0
+1 0 1 0 1
+
+
+
+
+
+
+
+20/3/25
+
+<script>
+
+//     var i=1
+
+//     while(i<=10)
+// {
+//     document.write("<br>"+i)
+//     i++
+// }
+
+
+// var j=10
+
+// do
+// {
+//     document.write("<br>"+j)
+//     j--
+// }
+// while(j>=1);
+
+
+
+
+// var n=10 , k
+
+// for(k=1 ; k<=10 ; k++)
+// {
+//     document.write("<br>"+n+"*"+k+"="+k*n)
+// }
+
+var n=1234 , rem , sum=0
+
+while(n!=0)
+{
+    rem = n%10
+    sum  = sum +rem
+    // type casting
+    n  = parseInt(n/10)
+    // document.write("<br>"+n)
+}
+
+document.write(sum)
+
+</script>
+
+18/3/25
+bhatiyakrushangi.cdmi@gmail.com
+
+JS
+[javascript]                                                               
+
+=> scripting language
+[interpreter , datatype mention not]
+
+2 type
+
+client => user interface
+[js , vbscript]
+server => cloud [data storage ] - backend
+[php,python]
+
+compiler
+interpreter
+
+sync - step by step
+js async - process output first => request => first access
+
+
+1 click => output => 2 sec
+2 click => 6 sec
+click => 3 sec
+
+
+3 methods
+
+1. body => document.write
+2. console => console.log
+3. pop box => alert => first
+
+v8 engine 
+
+
+variable declare 3 keyword
+
+var 
+
+let
+
+const
+
+Task
+
+5 subject
+
+total
+per
+min => nested if
+max => ? , :
+grade => ladder if
+
+====================
+
+<script>
+    // document.write("hello")
+    // document.write("<br>hello")
+
+    // console.log("check console");
+
+    // alert("Do you want to continue?")
+
+    var a=120 , b=90 
+
+    document.write("A = "+a)
+    document.write("<br>B = "+b)
+
+    var total = a+b
+    document.write("<br>Total = "+total)
+
+    if(a>b)
+    {
+        document.write("<br>A is max")
+    }
+    else
+    {
+        document.write("<br>B is max")
+    }
+
+</script>
+
+
+
+
+
+
