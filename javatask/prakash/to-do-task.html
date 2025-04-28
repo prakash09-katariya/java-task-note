@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="name">
+    <p class="error"></p>
+    <br><br>
+    
+    <input type="text" id="surname">
+    <p class="error1"></p>
+    <br><br>
+    <button onclick="submit()">submit</button>
+
+    <script>
+        
+        function submit(){
+            const name=document.getElementById('name').value
+            console.log(name);
+            const surname=document.getElementById('surname').value
+            console.log(surname);
+
+           if(name && surname){
+            alert("data submited sucessfullly")
+            document.getElementById('name').value='';
+            document.getElementById('surname').value='';
+           }
+
+           if(!name){
+            document.getElementsByClassName('error')[0].innerHTML="entername"
+           }
+           else{
+            document.getElementsByClassName('error')[0].innerHTML=""
+           }
+
+           if(!surname){
+            document.getElementsByClassName('error1')[0].innerHTML="entername"
+           }
+           else{
+            document.getElementsByClassName('error1')[0].innerHTML=""
+           }
+        }
+    </script>
+</body>
+</html>
