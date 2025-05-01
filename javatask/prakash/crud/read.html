@@ -90,12 +90,22 @@
             if(FirstName && LastName && SurName  && EmailId)
             {
              alert("data get successfuly")
-            //  setdata.push(obj)
+             setdata.push(obj)
              document.getElementById('FirstName').value=''
              document.getElementById('LastName').value=''
              document.getElementById('SurName').value=''
              document.getElementById('EmailId').value=''
+             dataview()
             }
+
+            function dataview(){
+            let stordata = ''
+            setdata.map (item => {
+                stordata = stordata + '<tr><td>'+ item.FirstName + '</td><td>' + item.LastName +  '</td><td>' + item.SurName + '</td><td>' + item.EmailId+ ' </td></tr>'   
+             })
+             document.getElementById('datashow').innerHTML= stordata
+
+        }
           
         }
     </script>

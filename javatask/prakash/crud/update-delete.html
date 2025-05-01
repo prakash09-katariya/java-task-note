@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-READ</title>
+</head>
+
+<body>
+    <div class="div">
+        <input class="style" type="text" name="" id="FirstName" placeholder="FirstName">
+        <p class="color" id="FirstName-error"></p>
+
+        <input class="style" type="text" name="" id="LastName" placeholder="LastName">
+        <p class="color" id="LastName-error"></p>
+
+        <input class="style" type="text" name="" id="SurName" placeholder="SurName">
+        <p class="color" id="SurName-error"></p>
+
+        <input class="style" type="email" name="" id="EmailId" placeholder="EmailId">
+        <p class="color" id="EmailId-error"></p>
+
+        <button onclick="submite()">submit</button>
+
+        <br>
+        <br>
+        <br>
+
+        <table border="3">
+            <tr>
+                <td>FirstName</td>
+                <td>LastName</td>
+                <td>SurName</td>
+                <td>EmailId</td>
+                <td>delete</td>
+                <td>update</td>
+            </tr>
+            <tbody id="datashow">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        var setdata = []
+        let editld = null
+        function submite() {
+            const FirstName = document.getElementById('FirstName').value
+            // console.log(FirstName);
+            const LastName = document.getElementById('LastName').value
+            // console.log(LastName);
+            const SurName = document.getElementById('SurName').value
+            // console.log(SurName);
+            const EmailId = document.getElementById('EmailId').value
+            // console.log(EmailId);
+
+            var obj = { FirstName, LastName, SurName, EmailId }
+            console.log(obj)
+
+
+            if (!FirstName) {
+                document.getElementById('FirstName-error').innerHTML = 'enter valid firstname'
+            }
+            else {
+                document.getElementById('FirstName-error').innerHTML = ''
+
+            }
+            if (!LastName) {
+                document.getElementById('LastName-error').innerHTML = 'enter valid LastName'
+            }
+            else {
+                document.getElementById('LastName-error').innerHTML = ''
+
+            }
+            if (!SurName) {
+                document.getElementById('SurName-error').innerHTML = 'enter valid SurName'
+            }
+            else {
+                document.getElementById('SurName-error').innerHTML = ''
+
+            }
+            if (!EmailId) {
+                document.getElementById('EmailId-error').innerHTML = 'enter valid firstname'
+            }
+            else {
+                document.getElementById('EmailId-error').innerHTML = ''
+
+            }
+
+            if (FirstName && LastName && SurName && EmailId) {
+                alert("data get successfuly")
+                setdata.push(obj)
+                document.getElementById('FirstName').value = ''
+                document.getElementById('LastName').value = ''
+                document.getElementById('SurName').value = ''
+                document.getElementById('EmailId').value = ''
+                dataview()
+            }
+
+            if (editdeta !== null) {
+                // edit mode: update existing object
+                setdata[editdeta] = { FirstName, LastName, SurName, EmailId };
+                editld = null;
+            } 
+            else {
+                // normal insert
+                setdata.push({ FirstName, LastName, SurName, EmailId });
+            }
+            
+        }
+        
+        function dataview() {
+            let stordata = ''
+            setdata.map((item,index) => {
+                stordata = stordata + '<tr><td>' + item.FirstName + '</td><td>' + item.LastName + '</td><td>' + item.SurName + '</td><td>' + item.EmailId + ' </td><td><button onclick = deleteData(' + index + ')>delete</button> </td><td><button onclick = editData(' + index + ')>update</button> </td></tr>'
+            })
+            document.getElementById('datashow').innerHTML = stordata
+        }
+
+        function deleteData(index) {
+            setdata.splice(index, 1)
+            dataview()
+        }
+
+        function editData(index) {
+            editld = index
+            const editdata = setdata[index];
+            console.log(editdata);
+            document.getElementById('FirstName').value = editdata.FirstName
+            document.getElementById('LastName').value = editdata.LastName
+            document.getElementById('SurName').value = editdata.SurName
+            document.getElementById('EmailId').value = editdata.EmailId
+        }
+    </script>
+</body>
